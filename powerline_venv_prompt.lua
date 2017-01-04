@@ -186,6 +186,27 @@ function colorful_git_prompt_filter()
 end
 
 
+
+function get_virtual_env(env_var)
+    env_path = clink.get_env(env_var)
+    if env_path then
+        basen = exports.basename(env_path)
+        return basen
+    end
+    return false
+end
+
+---
+ -- add python virutual env name 
+---
+function conda_prompt_filter()
+    -- add in python virtual env name
+    local python_env = get_virtual_env('DEFAULT_ENV')
+    if python_env then
+        clink.prompt.value = string.gsub(clink.prompt.value, "λ", "["..python_env.."] λ")
+    end
+end
+
 ---
  -- add virtual env name 
 ---
@@ -198,6 +219,7 @@ function venv_prompt_filter()
 end
 
 -- override the built-in filters
+clink.prompt.register_filter(conda_prompt_filter, 20)
 clink.prompt.register_filter(lambda_prompt_filter, 55)
 clink.prompt.register_filter(colorful_hg_prompt_filter, 60)
 clink.prompt.register_filter(colorful_git_prompt_filter, 60)
