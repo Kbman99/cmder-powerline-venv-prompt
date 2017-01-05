@@ -9,7 +9,7 @@ It has a blue background for the prompt.
 ![screenshot](screenshot3.png)
 
 
-For folders with git repos, you get green for clean repos and yellow background for changes.
+For folders with git repos, you see which branch you are working on and you get green background for clean repos and yellow for changes.
 ![screenshot](screenshot.png)
 
 
