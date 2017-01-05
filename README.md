@@ -3,19 +3,28 @@
 This is a custom prompt for [Cmder](http://cmder.net/) (the alternative console emulator for Windows) with support for Python virtual environments (venv).
 
 It looks like this:  
+![screenshot](screenshot1.png)
+
+It has a blue background for the prompt.
+![screenshot](screenshot3.png)
+
+
+For folders with git repos, you get green for clean repos and yellow background for changes.
 ![screenshot](screenshot.png)
 
-It has a blue background for the prompt.  
-For folders with git repos, you get yellow background for changes, and green for clean repos.
+
 The activated Python venv is displayed in square brackets, e.g. `[DJANGO]`
-I'm using `Roboto Mono Medium for Powerline` font.
+![screenshot](screenshot2.png)
+
+
+
 
 The look is inspired by [Powerline for Vim](https://github.com/powerline/powerline), and [Zsh's theme agnoster](https://github.com/agnoster/agnoster-zsh-theme).
 
 # Requirements
 
 Download the [AnonymousPro font](https://github.com/powerline/fonts/tree/master/AnonymousPro)  
-You'll be able to use any font in Cmder, but this font contains the symbols included in the prompt. Chances are good that most of the other Powerline fonts will work, too.
+You'll be able to use any font in Cmder, but this font contains the symbols included in the prompt. Chances are good that most of the other Powerline fonts will work, too. Font used in screenshots is: `Roboto Mono Medium for Powerline`
 
 # Usage
 
